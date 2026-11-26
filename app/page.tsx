@@ -1,3 +1,5 @@
+import RotatingName from "./rotating-name"
+
 const ArrowUpRight = () => (
   <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" className="arrow-icon">
     <path d="M3.5 12.5 12 4m0 0H5m7 0v7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
@@ -32,7 +34,7 @@ export default function Home() {
       <section className="hero page-shell">
         <div className="hero-copy">
           <p className="eyebrow"><span className="eyebrow-mark" /> SOFTWARE ENGINEERING · PROGRAM DELIVERY</p>
-          <h1>Sahil Raj<span className="hero-period">.</span></h1>
+          <h1><RotatingName /><span className="hero-period" aria-hidden="true">.</span></h1>
           <p className="hero-role">Technology Program Analyst <span>/</span> Wells Fargo</p>
           <p className="hero-intro">I work within software engineering, bringing people, plans, and technology together to move initiatives forward.</p>
           <a className="button" href="#experience">View experience <ArrowUpRight /></a>
