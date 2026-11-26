@@ -4,6 +4,8 @@ const ArrowUpRight = () => (
   </svg>
 )
 
+const glassEffect = { backdropFilter: "blur(28px)", WebkitBackdropFilter: "blur(28px)" }
+
 const experience = [
   {
     number: "01",
@@ -18,7 +20,7 @@ const experience = [
 export default function Home() {
   return (
     <main id="home">
-      <header className="topbar page-shell glass-panel">
+      <header className="topbar page-shell glass-panel" style={glassEffect}>
         <a className="wordmark" href="#home" aria-label="Sahil Raj, home">SR<span>.</span></a>
         <nav aria-label="Main navigation" className="nav-links">
           <a href="#experience">Experience</a>
@@ -35,7 +37,7 @@ export default function Home() {
           <p className="hero-intro">I work within software engineering, bringing people, plans, and technology together to move initiatives forward.</p>
           <a className="button" href="#experience">View experience <ArrowUpRight /></a>
         </div>
-        <div className="hero-card glass-panel" aria-label="A reminder to build with clarity">
+        <div className="hero-card glass-panel" style={glassEffect} aria-label="A reminder to build with clarity">
           <span className="card-index">A NOTE TO SELF&nbsp; / &nbsp;001</span>
           <p>Build with<br /><span>clarity.</span></p>
           <span className="card-stamp" aria-hidden="true">SR</span>
@@ -50,7 +52,7 @@ export default function Home() {
         </div>
         <div className="experience-list">
           {experience.map((item) => (
-            <article className="experience-card glass-panel" key={item.number}>
+            <article className="experience-card glass-panel" key={item.number} style={glassEffect}>
               <span className="experience-number">{item.number}</span>
               <div className="experience-main">
                 <p className="experience-status"><span className="status-dot" /> {item.status}</p>
@@ -65,7 +67,7 @@ export default function Home() {
       </section>
 
       <section className="contact-section page-shell" id="contact">
-        <div className="contact-card glass-panel">
+        <div className="contact-card glass-panel" style={glassEffect}>
           <div>
             <p className="eyebrow"><span className="eyebrow-mark" /> GET IN TOUCH</p>
             <h2>Let&apos;s talk.</h2>
