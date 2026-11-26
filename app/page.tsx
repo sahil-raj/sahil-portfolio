@@ -74,7 +74,11 @@ export default function Home() {
             <p className="eyebrow"><span className="eyebrow-mark" /> GET IN TOUCH</p>
             <h2>Let&apos;s talk.</h2>
           </div>
-          <a className="contact-link" href="mailto:hello@sahilraj.dev">Say hello <ArrowUpRight /></a>
+          <div className="contact-actions" aria-label="Social links">
+            <a className="social-link" href="https://linkedin.com/in/sahil-raj-in" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight /></a>
+            <a className="social-link" href="https://github.com/sahil-raj" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight /></a>
+            <a className="contact-link" href="mailto:hello@sahilraj.xyz">hello@sahilraj.xyz <ArrowUpRight /></a>
+          </div>
         </div>
       </section>
 
