@@ -2,18 +2,18 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Sahil Raj — Technology Program Analyst",
-  description: "Sahil Raj is a technology program analyst at Wells Fargo, helping teams turn complex initiatives into clear, steady progress.",
+  title: "Sahil Raj — Software Engineering at Wells Fargo",
+  description: "Sahil Raj is a technology program analyst in software engineering at Wells Fargo.",
   openGraph: {
-    title: "Sahil Raj — Technology Program Analyst",
-    description: "Thoughtful work. Meaningful progress.",
+    title: "Sahil Raj — Software Engineering at Wells Fargo",
+    description: "Technology program analyst working in software engineering at Wells Fargo.",
     type: "website",
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: "#101211",
-  colorScheme: "dark",
+  themeColor: "#f3f0e7",
+  colorScheme: "light",
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

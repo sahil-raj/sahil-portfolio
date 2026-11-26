@@ -4,16 +4,14 @@ const ArrowUpRight = () => (
   </svg>
 )
 
-const focusAreas = [
+const experience = [
   {
     number: "01",
-    title: "Program delivery",
-    description: "Turning complex initiatives into clear plans and steady progress.",
-  },
-  {
-    number: "02",
-    title: "Process improvement",
-    description: "Making the way teams work a little simpler, one step at a time.",
+    role: "Technology Program Analyst",
+    company: "Wells Fargo",
+    discipline: "Software Engineering",
+    description: "Working at the intersection of software engineering and technology program delivery.",
+    status: "CURRENT ROLE",
   },
 ]
 
@@ -23,8 +21,7 @@ export default function Home() {
       <header className="topbar page-shell glass-panel">
         <a className="wordmark" href="#home" aria-label="Sahil Raj, home">SR<span>.</span></a>
         <nav aria-label="Main navigation" className="nav-links">
-          <a href="#about">About</a>
-          <a href="#focus">Focus</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="availability" href="#contact"><span className="status-dot" /> Available to connect</a>
@@ -32,41 +29,48 @@ export default function Home() {
 
       <section className="hero page-shell">
         <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-mark" /> TECHNOLOGY PROGRAM ANALYST</p>
+          <p className="eyebrow"><span className="eyebrow-mark" /> SOFTWARE ENGINEERING · PROGRAM DELIVERY</p>
           <h1>Sahil Raj<span className="hero-period">.</span></h1>
-          <p className="hero-role">Wells Fargo <span>/</span> Technology &amp; Programs</p>
-          <p className="hero-intro">I bring people and plans together to make complex work feel clear.</p>
-          <a className="button" href="#focus">A little about what I do <ArrowUpRight /></a>
+          <p className="hero-role">Technology Program Analyst <span>/</span> Wells Fargo</p>
+          <p className="hero-intro">I work within software engineering, bringing people, plans, and technology together to move initiatives forward.</p>
+          <a className="button" href="#experience">View experience <ArrowUpRight /></a>
         </div>
-        <div className="hero-card glass-panel" aria-label="A simple reminder to keep work clear and moving">
+        <div className="hero-card glass-panel" aria-label="A reminder to build with clarity">
           <span className="card-index">A NOTE TO SELF&nbsp; / &nbsp;001</span>
-          <p>Make it<br /><span>clear.</span><br />Make it move.</p>
+          <p>Build with<br /><span>clarity.</span></p>
           <span className="card-stamp" aria-hidden="true">SR</span>
         </div>
-        <div className="hero-footer"><span>UNITED STATES</span><a href="#focus">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+        <div className="hero-footer"><span>UNITED STATES</span><a href="#experience">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
       </section>
 
-      <section className="focus-section page-shell" id="focus">
+      <section className="experience-section page-shell" id="experience">
         <div className="section-heading">
-          <p className="eyebrow"><span className="eyebrow-mark" /> WHAT I DO</p>
-          <h2>Good work,<br /><span>made clearer.</span></h2>
+          <p className="eyebrow"><span className="eyebrow-mark" /> EXPERIENCE</p>
+          <h2>What I&apos;m<br /><span>working on.</span></h2>
         </div>
-        <div className="focus-grid">
-          {focusAreas.map((area) => (
-            <article className="focus-card glass-panel" key={area.number}>
-              <span className="focus-number">{area.number}</span>
-              <div><h3>{area.title}</h3><p>{area.description}</p></div>
-              <span className="focus-arrow" aria-hidden="true"><ArrowUpRight /></span>
+        <div className="experience-list">
+          {experience.map((item) => (
+            <article className="experience-card glass-panel" key={item.number}>
+              <span className="experience-number">{item.number}</span>
+              <div className="experience-main">
+                <p className="experience-status"><span className="status-dot" /> {item.status}</p>
+                <h3>{item.role}</h3>
+                <p className="experience-meta">{item.company}<span>/</span>{item.discipline}</p>
+                <p className="experience-description">{item.description}</p>
+              </div>
+              <span className="experience-arrow" aria-hidden="true"><ArrowUpRight /></span>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="about-section page-shell" id="about">
-        <div className="about-card glass-panel">
-          <p className="eyebrow"><span className="eyebrow-mark" /> A LITTLE ABOUT ME</p>
-          <p className="about-copy">Curious by nature. Practical by default. Always learning.</p>
-          <a className="contact-link" href="mailto:hello@sahilraj.dev" id="contact">Say hello <ArrowUpRight /></a>
+      <section className="contact-section page-shell" id="contact">
+        <div className="contact-card glass-panel">
+          <div>
+            <p className="eyebrow"><span className="eyebrow-mark" /> GET IN TOUCH</p>
+            <h2>Let&apos;s talk.</h2>
+          </div>
+          <a className="contact-link" href="mailto:hello@sahilraj.dev">Say hello <ArrowUpRight /></a>
         </div>
       </section>
 
